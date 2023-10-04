@@ -276,9 +276,111 @@ pre-processing techniques. The model has achieved an impressive accuracy of 97%.
             <section class="resume-section" id="learnings">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Self Learnings</h2>
+
+
+
+
+
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Data Engineer Learnings</h3>
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+
+
+
+                            <br>
+                            <div class="subheading mb-3"><b>Real-Time Stock Market Analysis Project using AWS services </b></div>
+                           <p>
+                            <ul>
+
+                         
+                            <li><b>Data Acquisition from Kaggle:</b>
+                            <ul>
+                                <li>Obtained the Stock Market Data from Kaggle. This dataset likely includes historical stock price and trading volume data for various stocks and time periods.</li>
+                                
+
+                            </ul></li>
+                            
+                               <li> <b>Data Transformation and Real-Time Data Updates:</b>
+                            <ul>
+
+                                <li>Developed Python scripts to preprocess the Kaggle data and transform it into a format suitable for real-time updates.</li>
+                                <li>This involved data cleaning, formatting, and structuring.</li>
+                                <li>Set up a mechanism to continuously update the data in real-time, ensuring that new stock market data is ingested as it becomes available.</li>
+                        
+                            </ul></li>
+
+                            
+                            <li><b>Apache Kafka Integration:</b>
+                         <ul>
+
+                             <li>Downloaded Apache Kafka in EC2 instance, initialized it and used Apache-kafka-Python libraries to communicate with Apache Kafka.</li>
+                             <li>Integrated Apache Kafka into the data pipeline. Kafka can serve as a messaging system to handle real-time data streams.</li>
+                             <li>Configured Kafka producers to send the transformed stock market data in JSON format to Kafka topics in Kafka broker, where it can be consumed by downstream processes.</li>
+							 <li>Configured Kafka Consumers to consume the data and load the JSON data onto S3 bucket.</li>
+                     
+                         </ul>
+
+                      
+                           <li> <b>AWS S3 Data Ingestion:</b>
+                         <ul>
+
+                             <li>Set up an AWS S3 bucket to store the data.</li>
+                             <li>Developed Python scripts using S3FS to send the real-time stock market data to the appropriate S3 location. This is done by configuring Kafka consumers to write data to S3.</li>
+                         
+                     
+                         </ul></li>
+
+                      
+                         <li><b>AWS Glue Crawler Configuration:</b>
+                      <ul>
+
+                          <li>Configured AWS Glue Crawlers to automatically discover and catalog metadata about the data stored in S3 buckets. This included inferring the schema and table structure of the data.</li>
+                                             
+                  
+                      </ul></li>
+
+                     
+                         <li><b>AWS Glue Data Catalog:</b>
+                      <ul>
+
+                          <li>Utilized the AWS Glue Data Catalog as the centralized metadata repository for the data. This catalog contained information about the stock market data tables, their schemas, and locations in S3.</li>
+                                              
+                  
+                      </ul></li>
+
+                      
+                    
+                         <li><b>AWS Athena Integration:</b>
+                      <ul>
+
+                          <li>Set up AWS Athena to query the data stored in S3 buckets. Athena can use the metadata stored in the AWS Glue Data Catalog to facilitate SQL querying.</li>
+                          <li>Defined and executed SQL queries to analyze the stock market data.</li>
+                          <li>Generated reports, visualizations, and insights from the data using Athena.</li>
+                      
+                  
+                      </ul></li>
+                      <br>
+                    
+
+
+                      <br>
+                            <div class="subheading mb-3"><b>Youtube Analysis Project using AWS </b></div>
+                           <p><i>To be Uploaded Soon</i></p>
+
+                            <br>
                             <br>
                            <div class="subheading mb-3"><b>Data migration from on-prem database to Azure Cloud</b></div>
                            <p>
